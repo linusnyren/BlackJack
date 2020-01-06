@@ -6,14 +6,19 @@ import java.util.Scanner;
 
 public class BlackJack {
 	
-	private static BlackJack blackjack = new BlackJack();
+	private static BlackJack blackjack;
 	Deck spel = new Deck();
 	List<Card> hand = new ArrayList();
 	List<Card> Dhand = new ArrayList();
 	static String quest = "%nVill du ha ett kort?%n hit %n-----%n stand %n-----%n reset or quit %n";
 	
 	public static BlackJack getInstance() {
-		return blackjack;
+		if(blackjack == null){
+			blackjack = new BlackJack();
+			return blackjack;
+		}
+		else{
+			return blackjack
 		}
 
 	private void hit() {
