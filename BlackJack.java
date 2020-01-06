@@ -20,6 +20,7 @@ public class BlackJack {
 		else{
 			return blackjack
 		}
+	}
 
 	private void hit() {
 		hand.add(spel.draw());
